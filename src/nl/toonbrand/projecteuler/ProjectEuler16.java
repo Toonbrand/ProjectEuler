@@ -1,8 +1,6 @@
-package nl.toonbrand.test;
+package nl.toonbrand.projecteuler;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.text.DecimalFormat;
 
 /**
  * Created by toon on 8/10/16.

@@ -1,4 +1,4 @@
-package nl.toonbrand.test;
+package nl.toonbrand.projecteuler;
 
 /**
  * Created by toon on 8/10/16.

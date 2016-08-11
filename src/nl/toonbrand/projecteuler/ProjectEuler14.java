@@ -1,6 +1,4 @@
-package nl.toonbrand.test;
-
-import java.util.ArrayList;
+package nl.toonbrand.projecteuler;
 
 /**
  * Created by toon on 8/10/16.

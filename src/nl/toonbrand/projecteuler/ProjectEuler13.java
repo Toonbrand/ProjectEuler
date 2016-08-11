@@ -1,4 +1,4 @@
-package nl.toonbrand.test;
+package nl.toonbrand.projecteuler;
 
 import java.math.BigInteger;
 
