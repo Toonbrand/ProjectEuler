@@ -7,9 +7,12 @@ import java.math.BigInteger;
  */
 public class ProjectEuler20 {
     public static void main(String[] args) {
+        final long startTime = System.currentTimeMillis();
 
         sumOfDigits(factorialDigit(100));
 
+        final long endTime = System.currentTimeMillis();
+        System.out.println("\n[Execution time: " + (endTime - startTime) + " milliseconds]");
     }
 
     public static BigInteger factorialDigit(long input){

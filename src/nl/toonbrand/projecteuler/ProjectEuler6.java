@@ -5,6 +5,15 @@ package nl.toonbrand.projecteuler;
  */
 public class ProjectEuler6 {
     public static void main(String[] args) {
+        final long startTime = System.currentTimeMillis();
+
+        sumSquareDifference();
+
+        final long endTime = System.currentTimeMillis();
+        System.out.println("\n[Execution time: " + (endTime - startTime) + " milliseconds]");
+    }
+
+    public static void sumSquareDifference(){
         Long sumOfSquares=0L;
         Long squareOfSum;
         Long numbersTotal=0L;

@@ -5,8 +5,16 @@ package nl.toonbrand.projecteuler;
  */
 public class ProjectEuler14 {
     public static void main(String[] args) {
+        final long startTime = System.currentTimeMillis();
+
+        longestCollatzSequence(1_000_000);
+
+        final long endTime = System.currentTimeMillis();
+        System.out.println("\n[Execution time: " + (endTime - startTime) + " milliseconds]");
+    }
+
+    public static void longestCollatzSequence(int maxNumber){
         int largestStart = 0;
-        int maxNumber = 1_000_000;
         long largestSequence = 0;
 
         for(int i=1;i<=maxNumber;i++){

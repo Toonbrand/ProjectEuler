@@ -5,6 +5,15 @@ package nl.toonbrand.projecteuler;
  */
 public class ProjectEuler5 {
     public static void main(String[] args) {
+        final long startTime = System.currentTimeMillis();
+
+        System.out.println(smallestMultiple() + " is the smallest number divisible by all numbers from 1 to 20");
+
+        final long endTime = System.currentTimeMillis();
+        System.out.println("\n[Execution time: " + (endTime - startTime) + " milliseconds]");
+    }
+
+    public static long smallestMultiple(){
         boolean done = false;
         Long counter = 1L;
 
@@ -21,6 +30,6 @@ public class ProjectEuler5 {
             counter++;
         }
         counter--;
-        System.out.println(counter + " is the smallest number divisible by all numbers from 1 to 20");
+        return counter;
     }
 }

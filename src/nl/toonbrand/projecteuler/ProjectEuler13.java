@@ -107,7 +107,16 @@ public class ProjectEuler13 {
                 "72107838435069186155435662884062257473692284509516\n" +
                 "20849603980134001723930671666823555245252804609722\n" +
                 "53503534226472524250874054075591789781264330331690";
-        String[] parts = numbers.split("\n");
+        final long startTime = System.currentTimeMillis();
+
+        System.out.println("Sum total: " + bigSum(numbers));
+
+        final long endTime = System.currentTimeMillis();
+        System.out.println("\n[Execution time: " + (endTime - startTime) + " milliseconds]");
+    }
+
+    public static BigInteger bigSum(String bigNumber){
+        String[] parts = bigNumber.split("\n");
         BigInteger sum = BigInteger.ZERO;
 
         for(String out : parts){
@@ -115,6 +124,6 @@ public class ProjectEuler13 {
             sum = sum.add(new BigInteger(out));
         }
 
-        System.out.println("sum total = " + sum);
+        return sum;
     }
 }

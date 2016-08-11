@@ -8,7 +8,16 @@ import java.util.ArrayList;
  */
 public class ProjectEuler25 {
     public static void main(String[] args) {
+        final long startTime = System.currentTimeMillis();
         int maxDecimals = 1000;
+
+        System.out.println("The first Fibonacci sequence with " + maxDecimals + " decimals is " + fibonacciWithXDecimals(maxDecimals));
+
+        final long endTime = System.currentTimeMillis();
+        System.out.println("\n[Execution time: " + (endTime - startTime) + " milliseconds]");
+    }
+
+    public static int fibonacciWithXDecimals(int maxDecimals){
         BigInteger a,b,c;
         String fibonacci="";
         a = new BigInteger("1");
@@ -23,9 +32,7 @@ public class ProjectEuler25 {
             fibonacci = c.toString();
             count++;
         }
-        System.out.println("The " + count + "th term is the first Fibonacci to have " + maxDecimals + " decimals");
+        return count;
     }
-
-
 
 }

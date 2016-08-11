@@ -7,8 +7,16 @@ import java.util.*;
  */
 public class ProjectEuler4 {
     public static void main(String[] args){
-        ArrayList<Integer> PalinDromes = new ArrayList<Integer>();
+        final long startTime = System.currentTimeMillis();
 
+        System.out.println(largestPalindromeProduct() + " is the largest palindrome");
+
+        final long endTime = System.currentTimeMillis();
+        System.out.println("\n[Execution time: " + (endTime - startTime) + " milliseconds]");
+    }
+
+    public static long largestPalindromeProduct(){
+        ArrayList<Integer> PalinDromes = new ArrayList<Integer>();
         for(int i=100;i<1000;i++){
             for(int j=100;j<1000;j++){
                 if (isAPalindrome(i,j)){
@@ -19,7 +27,7 @@ public class ProjectEuler4 {
         }
 
         Collections.sort(PalinDromes);
-        System.out.println(PalinDromes.get(PalinDromes.size()-1) + " is the largest palindrome");
+        return PalinDromes.get(PalinDromes.size()-1);
     }
 
     public static Boolean isAPalindrome(int firstNumber, int secondNumber){

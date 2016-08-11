@@ -5,15 +5,24 @@ package nl.toonbrand.projecteuler;
  */
 public class ProjectEuler12 {
     public static void main(String[] args) {
+        final long startTime = System.currentTimeMillis();
+
+        firstTriangle(500);
+
+        final long endTime = System.currentTimeMillis();
+        System.out.println("\n[Execution time: " + (endTime - startTime) + " milliseconds]");
+    }
+
+    public static void firstTriangle(int divisorsGoal){
         boolean iterate = true;
-        int checkNumber = 4000;
+        int checkNumber = 1;
         while(iterate){
             long triangleValue = triangleNumber(checkNumber);
             long divisors = numberOfDivisors(triangleValue);
 
             System.out.println("Number: " + checkNumber + " | Triangle: " + triangleValue + " | Divisors: " + divisors);
 
-            if (divisors>500){
+            if (divisors>divisorsGoal){
                 iterate = false;
                 System.out.println("Success!");
             }
