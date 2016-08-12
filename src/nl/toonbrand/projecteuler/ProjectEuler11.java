@@ -31,6 +31,7 @@ public class ProjectEuler11 {
                 "20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16\n" +
                 "20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54\n" +
                 "01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48");
+
         long highestHorizontally = checkHorizontally(gridArr);
         long highestVertically = checkVertically(gridArr);
         long highestDiagonallyRight = checkDiagonallyRight(gridArr);
@@ -40,8 +41,8 @@ public class ProjectEuler11 {
         System.out.println(
                 "Highest horizontally: " + highestHorizontally +
                 "\nHighest vertically: " + highestVertically +
-                "\nHighest diagonally right: " + highestDiagonallyRight +
-                "\nHighest diagonally left: " + highestDiagonallyLeft +
+                "\nHighest diagonally NW>SE: " + highestDiagonallyRight +
+                "\nHighest diagonally NE>SW: " + highestDiagonallyLeft +
                 "\nHighest overall: " + highestOverall);
 
         final long endTime = System.currentTimeMillis();
@@ -113,6 +114,7 @@ public class ProjectEuler11 {
                 long sum = (grid[i][j+3]*grid[i+1][j+2]*grid[i+2][j+1]*grid[i+3][j]);
                 if (sum > highest){
                     highest = sum;
+                    System.out.println(grid[i][j+3]+ " " + grid[i+1][j+2]+ " " +grid[i+2][j+1]+ " " +grid[i+3][j]);
                 }
             }
         }
