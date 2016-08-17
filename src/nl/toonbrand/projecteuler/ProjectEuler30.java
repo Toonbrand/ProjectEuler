@@ -30,7 +30,7 @@ public class ProjectEuler30 {
             }
             if (numTot==i){
                 sum+=i;
-                System.out.println(i + " qualifies");
+                System.out.println(i + "\tqualifies");
             }
         }
         return(sum);
