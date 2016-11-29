@@ -29,6 +29,7 @@ public class ProjectEuler67 {
                 temp[i]=s.nextLine().split(" ");
             }
             System.out.println("File loaded successfully.");
+            s.close();
         }
         catch (FileNotFoundException e){
             System.out.println("File not found, make sure the url is working.");

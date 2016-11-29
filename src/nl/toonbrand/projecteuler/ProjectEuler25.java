@@ -1,7 +1,6 @@
 package nl.toonbrand.projecteuler;
 
 import java.math.BigInteger;
-import java.util.ArrayList;
 
 /**
  * Created by toon on 8/10/16.

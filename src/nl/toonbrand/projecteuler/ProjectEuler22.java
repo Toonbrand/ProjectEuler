@@ -29,6 +29,7 @@ public class ProjectEuler22 {
             URL url = new URL(fileUrl);
             Scanner s = new Scanner(url.openStream());
             fileContent = s.next().replace("\"", "");
+            s.close();
         }
         catch (FileNotFoundException e){
             System.out.println("File not found, make sure the url is working.");

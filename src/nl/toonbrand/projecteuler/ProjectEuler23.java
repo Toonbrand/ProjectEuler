@@ -42,7 +42,7 @@ public class ProjectEuler23 {
 
     public static ArrayList<Integer> sumOfAbundants(int max){
         ArrayList<Integer> abundants = abundantArray(max);
-        ArrayList<Integer> sumOfAbundants = new ArrayList();
+        ArrayList<Integer> sumOfAbundants = new ArrayList<>();
         System.out.println("Creating array of integers below "+max+" that can be written as the sum of two abundant numbers...");
 
         for(int i=0;i<abundants.size();i++){
